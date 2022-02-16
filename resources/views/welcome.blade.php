@@ -13,7 +13,12 @@
         @livewireStyles
     </head>
     <body class="antialiased">
-        <livewire:navigation-bar/>
+        <div class="relative overflow-hidden">
+            <div class="max-w-7xl h-full mx-auto">
+                <livewire:navigation-bar/>
+                <livewire:about-banner/>
+            </div>
+        </div>
         @livewireScripts
     </body>
 </html>

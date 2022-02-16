@@ -15,7 +15,19 @@ it('has home settings data', function () {
 });
 
 it('has about me data', function() {
-    $aboutMe = \App\Models\HomeSetting::where('code', 'about-me')->get();
+    $data = \App\Models\HomeSetting::where('code', 'about-me')->get();
 
-    $this->assertTrue($aboutMe->isNotEmpty());
+    $this->assertTrue($data->isNotEmpty());
+});
+
+it('has name title data', function () {
+    $data = \App\Models\HomeSetting::where('code', 'banner-title')->get();
+
+    $this->assertTrue($data->isNotEmpty());
+});
+
+it('has sub title data', function () {
+    $data = \App\Models\HomeSetting::where('code', 'banner-sub')->get();
+
+    $this->assertTrue($data->isNotEmpty());
 });
