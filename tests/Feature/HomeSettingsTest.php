@@ -31,3 +31,10 @@ it('has sub title data', function () {
 
     $this->assertTrue($data->isNotEmpty());
 });
+
+it('has professions data', function()
+{
+    $data = \App\Models\HomeSetting::where('code', 'profession')->get();
+
+    $this->assertTrue($data->isNotEmpty());
+});
