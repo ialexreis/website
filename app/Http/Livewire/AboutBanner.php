@@ -7,22 +7,12 @@ use Livewire\Component;
 
 class AboutBanner extends Component
 {
-    public HomeSetting $title;
-    public HomeSetting $subtitle;
-    public HomeSetting $profession;
+
+    public HomeSetting $content;
 
     public function __construct()
     {
-        $settings = HomeSetting::whereIn('code', ['banner-title', 'banner-sub', 'profession'])
-            ->where('active', 1)->get();
-        foreach ($settings as $setting){
-            if ($setting->code == 'banner-title')
-                $this->title = $setting;
-            elseif ($setting->code == 'banner-sub')
-                $this->subtitle = $setting;
-            elseif($setting->code == 'profession')
-                $this->profession = $setting;
-        }
+        $this->content = HomeSetting::where('code', 'about-me')->get();
     }
 
     public function render()
