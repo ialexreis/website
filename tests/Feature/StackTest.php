@@ -22,7 +22,6 @@ it('has learning stack data', function () {
     expect($data->isNotEmpty())->toBeTrue();
 });
 
-
 it('has stack section', function () {
     $response = $this->get('/');
 
