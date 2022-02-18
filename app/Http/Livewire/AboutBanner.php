@@ -8,11 +8,11 @@ use Livewire\Component;
 class AboutBanner extends Component
 {
 
-    public HomeSetting $content;
+    public HomeSetting $about;
 
     public function __construct()
     {
-        $this->content = HomeSetting::where('code', 'about-me')->get();
+        $this->about = HomeSetting::where('code', 'about-me')->first();
     }
 
     public function render()
