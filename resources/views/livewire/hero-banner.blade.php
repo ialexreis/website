@@ -5,8 +5,8 @@
             <div class="text-8xl font-semibold text-gray-900 leading-none"><h1>👋 &nbsp;
                     <span contenteditable="true">{{$title->content}}</span>
                 </h1></div>
-            <div class="mt-10 text-xl font-light text-true-gray-500 antialiased">{{$subtitle->content}}</div>
-            <div class="mt-6 text-xl font-light text-true-gray-500 antialiased">
+            <div class="mt-10 text-l font-light text-true-gray-500 antialiased">{{$subtitle->content}}</div>
+            <div class="mt-6 text-l font-light text-true-gray-500 antialiased">
                 {{ Str::of($profession->content)->toHtmlString()}}
             </div>
 

@@ -1,4 +1,4 @@
-<section class="" id="stack">
+<section class="shadow-xl drop-shadow-xl" id="stack">
     <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Stack</h2>
 
@@ -6,7 +6,7 @@
 
             @foreach($items as $item)
                 <div class="group relative">
-                    <div class="w-full min-h-10 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+                    <div class="w-full min-h-10 aspect-w-1 aspect-h-1 rounded-md overflow-hidden shadow-none drop-shadow-none group-hover:opacity-75 lg:aspect-none">
                         {{Str::of($item->icon)->toHtmlString()}}
                     </div>
                     <div class="mt-4 flex justify-between content-center">
