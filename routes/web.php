@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Livewire\AboutPage;
-use App\Http\Livewire\BlogPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', AboutPage::class);
-Route::get('/blog', BlogPage::class);
+Route::get('/', \App\Http\Livewire\AboutPage::class);
+Route::get('/blog', \App\Http\Livewire\BlogPage::class);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

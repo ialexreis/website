@@ -15,24 +15,10 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-    @livewireStyles
     </head>
-    <body class="antialiased">
-    <div class="relative overflow-hidden">
-        <div class="max-w-7xl h-full mx-auto">
-            @if(Route::is('dashboard'))
-                @include('layouts.navigation')
-                <!-- Page Content -->
-                    <main>
-                        {{ $slot }}
-                    </main>
-            @else
-                <livewire:navigation-bar/>
-                {{$slot}}
-                <livewire:footer/>
-            @endif
+    <body>
+        <div class="font-sans text-gray-900 antialiased">
+            {{ $slot }}
         </div>
-    </div>
-    @livewireScripts
     </body>
 </html>
