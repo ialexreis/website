@@ -20,7 +20,7 @@
     <body class="antialiased">
     <div class="relative overflow-hidden">
         <div class="max-w-7xl h-full mx-auto">
-            @if(Route::is('dashboard'))
+            @if(Route::has('dashboard'))
                 @include('layouts.navigation')
                 <!-- Page Content -->
                     <main>

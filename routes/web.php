@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Http\Livewire\AboutPage::class);
 Route::get('/blog', \App\Http\Livewire\BlogPage::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+    Route::get('/', fn ()  => view('dashboard'))->name('dashboard');
+    Route::get('/blog-posts', \App\Http\Livewire\Admin\BlogPosts::class)->name('admin_blog');
+    Route::get('/blog-posts/{id}', \App\Http\Livewire\Admin\BlogPostForm::class)->name('admin_blog_edit');
+});
 
 require __DIR__.'/auth.php';
